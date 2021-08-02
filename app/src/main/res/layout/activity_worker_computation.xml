@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
+    tools:context=".WorkerComputation">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/working"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/working"
+                    android:visibility="invisible" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/done"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_online" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/waiting"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/waiting" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/statusCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#183Fd8"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/statusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Waiting for work..."
+                        android:textColor="#ffff" />
+
+                    <TextView
+                        android:id="@+id/workStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Work Status"
+                        android:textColor="#ffff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <!--                    <TextView-->
+<!--                        android:id="@+id/partitions"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/workStatus"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="Vectors multiplied"-->
+<!--                        android:textColor="#ffff" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/count"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/partitions"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:text="0"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textSize="60sp" />-->
+                </RelativeLayout>
+                    <TextView
+                        android:id="@+id/powerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Power stats not available" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:backgroundTint="#f7057a"
+                android:onClick="onDisconnect"
+                android:text="Disconnect"
+                app:cornerRadius="5dp" />
+        </LinearLayout>
+
+
+</RelativeLayout>
